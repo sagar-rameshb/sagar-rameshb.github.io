@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar R - Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.2);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid #334155;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .social-links a {
+            color: var(--text-main);
+            background-color: var(--card-bg);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 15px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #334155;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+        .about-text {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .skill-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+        .skill-card h3 {
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .skill-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+        }
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+        .project-tech {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-family: monospace;
+        }
+        .project-card p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--bg-color);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sagar R</h1>
+            <p>Computer Science Graduate & Technical Specialist</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sagar-rameshb" target="_blank">LinkedIn</a>
+                <a href="https://github.com/sagar-rameshb" target="_blank">GitHub</a>
+                <a href="mailto:sagarramesh.edu@gmail.com">Email Me</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="about-text">
+                Computer Science and Engineering graduate from SE A College of Engineering and Technology (VTU). Passionate about building robust backend logic, high-accuracy machine learning models, and efficient data automation workflows.
+            </p>
+            <p class="about-text">
+                Experienced as a Freelance Technical Specialist delivering custom Python scripting and advanced Excel automation solutions. Dedicated to solving complex technical challenges with precision and speed.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming & Core</h3>
+                    <p>Python, Java, C, C++, SQL, Object-Oriented Programming, Data Structures & Algorithms.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Science & ML</h3>
+                    <p>Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, SMOTE Data Balancing, Predictive Modeling.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Automation & Tools</h3>
+                    <p>Advanced Excel (Macros, Custom Formulas, VBA), Git, VS Code, Jupyter Notebook, Technical Troubleshooting.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-card">
+                <h3>Fraud Prevention Using Machine Learning</h3>
+                <div class="project-tech">Python | Scikit-learn | Pandas | NumPy | SMOTE</div>
+                <p>
+                    Developed a high-performance supervised learning pipeline to detect fraudulent credit card transactions on an extremely imbalanced Kaggle dataset (~284K records, <0.2% fraud). Handled feature engineering, exploratory data analysis, and applied SMOTE for class balancing. Evaluated Random Forest, Logistic Regression, and Gradient Boosting models, achieving 98%+ precision.
+                </p>
+                <a href="https://github.com/sagar-rameshb/fraud_prevention_using_ml" target="_blank" class="btn">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Excel & Python Automation Workflows</h3>
+                <div class="project-tech">Python Scripting | Advanced Excel | Custom Dashboards</div>
+                <p>
+                    Engineered custom automated data processing tools for clients as an independent technical contractor. Streamlined repetitive data entry tasks, built dynamic reporting dashboards, and optimized system configurations.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Sagar R. Built for high impact.</p>
+        </footer>
+    </div>
+</body>
+</html>

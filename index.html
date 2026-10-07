@@ -5,178 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sagar Ramesh | Software Developer</title>
     <style>
-        /* Apple-style Reset & Base Variables */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
         body {
-            /* Uses native Apple fonts on Apple devices, clean fallbacks on Windows/Android */
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f5f5f7;
-            color: #1d1d1f;
-            line-height: 1.47059;
-            font-weight: 400;
-            letter-spacing: -0.022em;
+            background-color: #f5f5f7; color: #1d1d1f; line-height: 1.47; font-weight: 400;
         }
-
-        /* Glassmorphism Header */
         header {
-            background: rgba(255, 255, 255, 0.72);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 9999;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-            padding: 16px 20px;
-            display: flex;
-            justify-content: center;
+            background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(20px);
+            position: fixed; top: 0; width: 100%; border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 16px 20px; display: flex; justify-content: center; z-index: 100;
         }
-
-        header h1 {
-            font-size: 21px;
-            font-weight: 600;
-            letter-spacing: 0.011em;
-            color: #1d1d1f;
-        }
-
-        /* Main Container */
-        main {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 120px 20px 80px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 48px;
-            line-height: 1.08349;
-            font-weight: 700;
-            letter-spacing: -0.003em;
-            margin-bottom: 60px;
-        }
-
-        /* Apple-style Project Cards */
+        header h1 { font-size: 21px; font-weight: 600; }
+        main { max-width: 980px; margin: 0 auto; padding: 120px 20px 80px; }
+        .section-title { text-align: center; font-size: 48px; font-weight: 700; margin-bottom: 60px; }
         .project-card {
-            background: #ffffff;
-            border-radius: 18px;
-            padding: 40px;
-            margin-bottom: 32px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            background: #ffffff; border-radius: 18px; padding: 40px; margin-bottom: 32px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04); transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
-
-        .project-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .project-card h3 {
-            font-size: 28px;
-            line-height: 1.14286;
-            font-weight: 600;
-            letter-spacing: 0.007em;
-            margin-bottom: 8px;
-        }
-
-        .project-tech {
-            font-size: 14px;
-            line-height: 1.28577;
-            font-weight: 600;
-            color: #86868b;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .project-card p {
-            font-size: 17px;
-            line-height: 1.47059;
-            font-weight: 400;
-            letter-spacing: -0.022em;
-            color: #515154;
-            margin-bottom: 30px;
-            max-width: 85%;
-        }
-
-        /* Pill-shaped Action Buttons */
+        .project-card:hover { transform: scale(1.02); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08); }
+        .project-card h3 { font-size: 28px; font-weight: 600; margin-bottom: 8px; }
+        .project-tech { font-size: 14px; font-weight: 600; color: #86868b; margin-bottom: 20px; text-transform: uppercase; }
+        .project-card p { font-size: 17px; color: #515154; margin-bottom: 30px; }
         .btn {
-            display: inline-block;
-            background-color: #0071e3;
-            color: #ffffff;
-            padding: 12px 22px;
-            border-radius: 980px;
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: -0.016em;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
+            display: inline-block; background-color: #0071e3; color: #ffffff; padding: 12px 22px;
+            border-radius: 980px; font-size: 14px; text-decoration: none; transition: background-color 0.3s;
         }
-
-        .btn:hover {
-            background-color: #0077ED;
-        }
-
-        /* Responsive Design for Mobile */
-        @media only screen and (max-width: 734px) {
-            .section-title { font-size: 32px; }
-            .project-card { padding: 30px 20px; }
-            .project-card p { max-width: 100%; }
-        }
+        .btn:hover { background-color: #0077ED; }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Sagar Ramesh</h1>
     </header>
-
     <main>
         <section id="projects">
             <h2 class="section-title">Featured Projects</h2>
-
+            
             <div class="project-card">
                 <h3>E-Commerce Fraud Detection using Machine Learning</h3>
                 <div class="project-tech">Python | Flask | Scikit-Learn | HTML/CSS</div>
-                <p>
-                    A web-based machine learning application designed to predict whether e-commerce transactions are legitimate or fraudulent. Features an interactive UI for evaluating individual real-time transactions and supports automated batch processing through CSV data uploads.
-                </p>
+                <p>A web-based machine learning application designed to predict whether e-commerce transactions are legitimate or fraudulent. Features an interactive UI for evaluating individual real-time transactions and supports automated batch processing through CSV data uploads.</p>
                 <a href="https://github.com/sagar-rameshb/E-Commerce-Fraud-Detection-ML" target="_blank" class="btn">View on GitHub</a>
             </div>
 
             <div class="project-card">
                 <h3>Student Record & GPA Management System</h3>
                 <div class="project-tech">Java | Object-Oriented Programming | HashMap Collections</div>
-                <p>
-                    A robust console-based backend application designed to manage student registrations, course enrollments, and academic transcripts. Features dynamic runtime state management using HashMaps and automated cumulative GPA calculations based on credit hours and grade points.
-                </p>
+                <p>A robust console-based backend application designed to manage student registrations, course enrollments, and academic transcripts. Features dynamic runtime state management using HashMaps and automated cumulative GPA calculations based on credit hours and grade points.</p>
                 <a href="https://github.com/sagar-rameshb/StudentRecordAndGPAManagementSystem" target="_blank" class="btn">View on GitHub</a>
             </div>
 
             <div class="project-card">
                 <h3>Banking Management System</h3>
                 <div class="project-tech">Java | Object-Oriented Programming | Collections Framework</div>
-                <p>
-                    A secure, object-oriented console application developed in Java to handle core banking operations including account creation, deposits, withdrawals, and balance lookups with robust input validation and dynamic runtime state management using HashMaps.
-                </p>
+                <p>A secure, object-oriented console application developed in Java to handle core banking operations including account creation, deposits, withdrawals, and balance lookups with robust input validation and dynamic runtime state management using HashMaps.</p>
                 <a href="https://github.com/sagar-rameshb/BankingManagementSystem" target="_blank" class="btn">View on GitHub</a>
             </div>
 
             <div class="project-card">
                 <h3>Excel & Python Automation Workflows</h3>
                 <div class="project-tech">Python Scripting | Advanced Excel | Custom Dashboards</div>
-                <p>
-                    Engineered custom automated data processing tools for clients as an independent technical contractor. Streamlined repetitive data entry tasks, built dynamic reporting dashboards, and optimized system configurations.
-                </p>
+                <p>Engineered custom automated data processing tools for clients as an independent technical contractor. Streamlined repetitive data entry tasks, built dynamic reporting dashboards, and optimized system configurations.</p>
             </div>
-
         </section>
     </main>
-
 </body>
 </html>
